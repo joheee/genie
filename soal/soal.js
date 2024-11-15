@@ -48,17 +48,17 @@ function hydrateData() {
   const logged = JSON.parse(localStorage.getItem("logged"));
   console.log(logged);
 
-  if(!logged.belajar.PenggunaanHuruf.status) {
-    document.getElementById("PenggunaanHuruf").style.display = "block"
+  if (!logged.belajar.PenggunaanHuruf.status) {
+    document.getElementById("PenggunaanHuruf").style.display = "block";
   }
-  if(!logged.belajar.PenggunaanTandaBaca.status) {
-    document.getElementById("PenggunaanTandaBaca").style.display = "block"
+  if (!logged.belajar.PenggunaanTandaBaca.status) {
+    document.getElementById("PenggunaanTandaBaca").style.display = "block";
   }
-  if(!logged.belajar.PenulisanKata.status) {
-    document.getElementById("PenulisanKata").style.display = "block"
+  if (!logged.belajar.PenulisanKata.status) {
+    document.getElementById("PenulisanKata").style.display = "block";
   }
-  if(!logged.belajar.PenggunaanKataSerapan.status) {
-    document.getElementById("PenggunaanKataSerapan").style.display = "block"
+  if (!logged.belajar.PenggunaanKataSerapan.status) {
+    document.getElementById("PenggunaanKataSerapan").style.display = "block";
   }
 }
 hydrateData();
