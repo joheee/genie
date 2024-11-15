@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genie | Soal</title>
+    <link rel="stylesheet" href="soal.css" />
+    <link rel="icon" href="../assets/icon.png" type="image/x-icon" />
+  </head>
+  <body class="container-body">
+    <div class="sidebar-container">
+      <div class="top-part">
+        <div class="sidebar-icon">
+          <img class="sidebar-image" src="../assets/icon.png" alt="" />
+        </div>
+        <div class="sidebar-button">
+          <a class="button" href="../dashboard/">Dashboard</a>
+          <a class="button" href="../soal/">Soal</a>
+          <a class="button" href="">Profil</a>
+        </div>
+      </div>
+      <a onclick="handleLogout()" class="button" href="../">Keluar</a>
+    </div>
+    <div class="content-container">
+      <div class="inner-content-container">
+        <div class="inner-title">Temukan Materi yang Ingin Kamu Coba</div>
+        <div class="material-container">
+          <a
+            id="PenggunaanHuruf"
+            class="material-anchor"
+            href="../action_soal/?key=PenggunaanHuruf&current=0&benar=0"
+          >
+            <img class="material-image" src="../assets/huruf.png" alt="" />
+            <div class="">Penggunaan Huruf</div>
+          </a>
+          <a
+            id="PenggunaanTandaBaca"
+            class="material-anchor"
+            href="../action_soal/?key=PenggunaanTandaBaca&current=0&benar=0"
+          >
+            <img class="material-image" src="../assets/tandabaca.png" alt="" />
+            <div class="">Penggunaan Tanda Baca</div>
+          </a>
+          <a
+            id="PenulisanKata"
+            class="material-anchor"
+            href="../action_soal/?key=PenulisanKata&current=0&benar=0"
+          >
+            <img class="material-image" src="../assets/penulisan.png" alt="" />
+            <div class="">Penulisan Kata</div>
+          </a>
+          <a
+            id="PenggunaanKataSerapan"
+            class="material-anchor"
+            href="../action_soal/?key=PenggunaanKataSerapan&current=0&benar=0"
+          >
+            <img class="material-image" src="../assets/serapan.png" alt="" />
+            <div class="">Penggunaan Kata Serapan</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="soal.js"></script>

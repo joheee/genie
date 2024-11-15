@@ -1,0 +1,147 @@
+{
+  "PenggunaanHuruf": [
+    {
+      "question": "Manakah yang benar dalam penggunaan huruf kapital pada nama gelar?",
+      "options": ["Prof. Dr. Andi Kurniawan", "Prof. dr. Andi Kurniawan"],
+      "right": 0
+    },
+    {
+      "question": "Tentukan kalimat yang tepat dalam penggunaan huruf kapital untuk nama negara!",
+      "options": [
+        "Saya sedang belajar tentang Budaya Jerman.",
+        "Saya sedang belajar tentang budaya Jerman."
+      ],
+      "right": 1
+    },
+    {
+      "question": "Mana yang benar dalam penggunaan huruf untuk istilah asing?",
+      "options": [
+        "Saya tertarik dengan konsep big data dalam teknologi.",
+        "Saya tertarik dengan konsep Big Data dalam teknologi."
+      ],
+      "right": 0
+    },
+    {
+      "question": "Pilihlah kalimat yang menggunakan huruf kapital dengan benar!",
+      "options": [
+        "Pada hari Sabtu, kami akan pergi ke Jakarta.",
+        "Pada hari sabtu, kami akan pergi ke Jakarta."
+      ],
+      "right": 0
+    }
+  ],
+  "PenggunaanTandaBaca": [
+    {
+      "question": "Pilihlah kalimat yang menggunakan tanda koma dengan benar!",
+      "options": [
+        "Ayah, saya ingin pergi ke taman.",
+        "Ayah saya ingin pergi, ke taman."
+      ],
+      "right": 0
+    },
+    {
+      "question": "Manakah kalimat yang menggunakan tanda titik dua dengan tepat?",
+      "options": [
+        "Ada beberapa hal yang perlu kamu persiapkan: Buku, pulpen, dan tas.",
+        "Ada beberapa hal yang perlu kamu persiapkan: buku, pulpen, dan tas."
+      ],
+      "right": 1
+    },
+    {
+      "question": "Pilih kalimat yang tepat dalam penggunaan tanda petik (\"\")!",
+      "options": [
+        "Dia berkata, \"Saya akan datang jam 10 pagi.\"",
+        "Dia berkata \"Saya akan datang jam 10 pagi\"."
+      ],
+      "right": 0
+    },
+    {
+      "question": "Manakah yang benar dalam penggunaan tanda hubung (-)?",
+      "options": [
+        "Ibu membawa tas besar-berwarna merah.",
+        "Ibu membawa tas besar berwarna-merah."
+      ],
+      "right": 0
+    },
+    {
+      "question": "Manakah kalimat yang benar dalam penggunaan tanda titik koma (;)?",
+      "options": [
+        "Saya sudah menyiapkan bahan presentasi; namun, saya belum siap untuk berbicara di depan umum.",
+        "Saya sudah menyiapkan bahan presentasi, namun; saya belum siap untuk berbicara di depan umum."
+      ],
+      "right": 0
+    }
+  ],
+  "PenulisanKata": [
+    {
+      "question": "Pilihlah penulisan kata yang tepat dalam kalimat berikut!",
+      "options": [
+        "Dia sangat tertarik dengan topik ini, karena dia merasa ini sangat relevan.",
+        "Dia sangat tertarik dengan topik ini karena dia merasa ini sangat relevan."
+      ],
+      "right": 1
+    },
+    {
+      "question": "Pilih penulisan yang benar untuk kata serapan berikut!",
+      "options": [
+        "Komputer merupakan alat yang penting di dunia pendidikan.",
+        "Komputer merupakan alat yang penting didunia pendidikan."
+      ],
+      "right": 0
+    },
+    {
+      "question": "Mana penulisan kata yang benar dalam kalimat berikut?",
+      "options": [
+        "Saya harus membayar biaya administrasi untuk pendaftaran ulang.",
+        "Saya harus membayar biaya adminstrasi untuk pendaftaran ulang."
+      ],
+      "right": 0
+    },
+    {
+      "question": "Manakah penulisan yang benar untuk kata yang diawali dengan huruf kapital?",
+      "options": [
+        "Saya ingin berlibur ke Bali akhir tahun nanti.",
+        "Saya ingin berlibur ke bali akhir tahun nanti."
+      ],
+      "right": 0
+    },
+    {
+      "question": "Pilihlah penulisan kata yang tepat dalam kalimat berikut!",
+      "options": [
+        "Rencana tersebut membutuhkan persiapan yang matang.",
+        "Rencana tersebut membutuhkan persiapan yang mateng."
+      ],
+      "right": 0
+    }
+  ],
+  "PenggunaanKataSerapan": [
+    {
+      "question": "Manakah kalimat yang menggunakan kata serapan dengan benar?",
+      "options": [
+        "Saya akan mengikuti workshop mengenai teknologi terkini.",
+        "Saya akan mengikuti worshop mengenai tekhnologi terkini."
+      ],
+      "right": 0
+    },
+    {
+      "question": "Manakah contoh di bawah ini yang benar?",
+      "options": ["negeri menjadi negri", "istri menjadi isteri"],
+      "right": 1
+    },
+    {
+      "question": "Berikut ini adalah contoh kata yang berupa adopsi, kecuali",
+      "options": ["Mall", "Pasars"],
+      "right": 1
+    },
+    {
+      "question": "Pilihlah penulisan yang benar sesuai EYD untuk kata serapan",
+      "options": ["Apotik", "Apotek"],
+      "right": 1
+    },
+    {
+      "question": "Pilih kata serapan yang penulisannya tidak sesuai dengan EYD!",
+      "options": ["Karakter", "Komplek"],
+      "right": 1
+    }
+  ]
+}

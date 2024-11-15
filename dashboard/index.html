@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genie | Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="icon" href="../assets/icon.png" type="image/x-icon" />
+  </head>
+  <body class="container-body">
+    <div class="sidebar-container">
+      <div class="top-part">
+        <div class="sidebar-icon">
+          <img class="sidebar-image" src="../assets/icon.png" alt="" />
+        </div>
+        <div class="sidebar-button">
+          <a class="button" href="../dashboard/">Dashboard</a>
+          <a class="button" href="../soal/">Soal</a>
+          <a class="button" href="">Profil</a>
+        </div>
+      </div>
+      <a onclick="handleLogout()" class="button" href="../">Keluar</a>
+    </div>
+    <div class="content-container">
+      <div class="inner-content-container">
+        <div class="navigation-container">
+          <div class="">
+            <div id="navigation-title" class="navigation-title">
+              Hai, Historia!
+            </div>
+            <div class="navigation-subtitle">
+              Apa yang ingin kamu pelajari hari ini?
+            </div>
+          </div>
+          <img src="../assets/dashboard.png" alt="" />
+        </div>
+        <div class="inner-title">Materi yang baru saja kamu pelajari</div>
+        <div class="material-container">
+          <a
+            id="PenggunaanHuruf"
+            class="material-anchor"
+            href="../action_dashboard/?key=PenggunaanHuruf&current=0&benar=0"
+          >
+            <img class="material-image" src="../assets/huruf.png" alt="" />
+            <div id="PenggunaanHuruf_text" class="">Penggunaan Huruf</div>
+          </a>
+          <a
+            id="PenggunaanTandaBaca"
+            class="material-anchor"
+            href="../action_dashboard/?key=PenggunaanTandaBaca&current=0&benar=0"
+          >
+            <img class="material-image" src="../assets/tandabaca.png" alt="" />
+            <div id="PenggunaanTandaBaca_text" class="">Penggunaan Tanda Baca</div>
+          </a>
+          <a
+            id="PenulisanKata"
+            class="material-anchor"
+            href="../action_dashboard/?key=PenulisanKata&current=0&benar=0"
+          >
+            <img class="material-image" src="../assets/penulisan.png" alt="" />
+            <div id="PenulisanKata_text" class="">Penulisan Kata</div>
+          </a>
+          <a
+            id="PenggunaanKataSerapan"
+            class="material-anchor"
+            href="../action_dashboard/?key=PenggunaanKataSerapan&current=0&benar=0"
+          >
+            <img class="material-image" src="../assets/serapan.png" alt="" />
+            <div id="PenggunaanKataSerapan_text" class="">Penggunaan Kata Serapan</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="dashboard.js"></script>
