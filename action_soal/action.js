@@ -1,12 +1,14 @@
 // CHECK SESSION
 if (!localStorage.getItem("logged")) {
-  window.location.href = "http://localhost:5500/login";
+  // Redirect dynamically based on the current domain
+  window.location.href = `${window.location.origin}/login/`;
 }
+
 // LOAD DATA
 async function getDataFromLocalStorage(key, url) {
   const storedData = localStorage.getItem(key);
   if (storedData) {
-    console.log("data already push into localstorage!");
+    console.log("Data already pushed into localStorage!");
     return JSON.parse(storedData);
   } else {
     const response = await fetch(url);
@@ -18,17 +20,17 @@ async function getDataFromLocalStorage(key, url) {
     return data;
   }
 }
+
 async function loadData() {
   try {
     const users = await getDataFromLocalStorage(
       "users",
-      "http://localhost:5500/data/users.json"
+      `${window.location.origin}/data/users.json`  // Use dynamic domain
     );
     const questions = await getDataFromLocalStorage(
       "questions",
-      "http://localhost:5500/data/questions.json"
+      `${window.location.origin}/data/questions.json`  // Use dynamic domain
     );
-
     // console.log("Users:", users);
     // console.log("Questions:", questions);
   } catch (error) {
@@ -43,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const key = urlParams.get("key");
   const current = urlParams.get("current");
-  let benar = urlParams.get("benar");
+  let benar = parseInt(urlParams.get("benar"), 10) || 0;
 
   const currentQuestion = questions[key][current];
   console.log(currentQuestion);
@@ -75,9 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.getElementById("next");
   nextButton.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.href = `http://localhost:5500/action_soal/?key=${key}&current=${
-      parseInt(current) + 1
-    }&benar=${benar}`;
+    window.location.href = `${window.location.origin}/action_soal/?key=${key}&current=${parseInt(current) + 1}&benar=${benar}`;
   });
   nextButton.style.display = "none";
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     localStorage.setItem("users", JSON.stringify(users));
-    window.location.href = "http://localhost:5500/dashboard";
+    window.location.href = `${window.location.origin}/dashboard/`;
   });
   finishButton.style.display = "none";
 
@@ -121,15 +121,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Check if the selected answer matches the correct answer index
     const isCorrect = selectedAnswerIndex === correctAnswerIndex;
-    isCorrect ? benar++ : benar;
+    if (isCorrect) {
+      benar++;
+    }
 
     // Display the correct or incorrect message
     benarMessage.style.display = isCorrect ? "block" : "none";
     salahMessage.style.display = isCorrect ? "none" : "block";
 
-    salahMessage.innerText = `Jawaban yang benar adalah pilihan ke-${
-      parseInt(currentQuestion.right) + 1
-    }, ${currentQuestion.options[currentQuestion.right]}`;
+    salahMessage.innerText = `Jawaban yang benar adalah pilihan ke-${parseInt(currentQuestion.right) + 1}, ${currentQuestion.options[currentQuestion.right]}`;
 
     checkButton.style.display = "none";
 

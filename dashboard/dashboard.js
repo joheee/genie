@@ -1,12 +1,14 @@
 // CHECK SESSION
 if (!localStorage.getItem("logged")) {
-  window.location.href = "http://localhost:5500/login";
+  // Redirect dynamically based on the current domain
+  window.location.href = `${window.location.origin}/login/`;
 }
+
 // LOAD DATA
 async function getDataFromLocalStorage(key, url) {
   const storedData = localStorage.getItem(key);
   if (storedData) {
-    console.log("data already push into localstorage!");
+    console.log("Data already pushed into localStorage!");
     return JSON.parse(storedData);
   } else {
     const response = await fetch(url);
@@ -18,15 +20,16 @@ async function getDataFromLocalStorage(key, url) {
     return data;
   }
 }
+
 async function loadData() {
   try {
     const users = await getDataFromLocalStorage(
       "users",
-      "http://localhost:5500/data/users.json"
+      `${window.location.origin}/data/users.json`  // Use dynamic domain
     );
     const questions = await getDataFromLocalStorage(
       "questions",
-      "http://localhost:5500/data/questions.json"
+      `${window.location.origin}/data/questions.json`  // Use dynamic domain
     );
 
     console.log("Users:", users);
@@ -35,22 +38,27 @@ async function loadData() {
     console.error("There was a problem with the fetch operation:", error);
   }
 }
+
 loadData();
 
-//LOGOUT
+// LOGOUT
 function handleLogout() {
   localStorage.removeItem("logged");
-  window.location.href = "http://localhost:5500/";
+  // Redirect dynamically to home page
+  window.location.href = `${window.location.origin}/`;
 }
 
-//HYDRATE DATA
+// HYDRATE DATA
 function hydrateData() {
   const logged = JSON.parse(localStorage.getItem("logged"));
   console.log(logged.belajar);
+
+  // Update navigation title
   document.getElementById(
     "navigation-title"
   ).innerText = `Hai, ${logged.username}!`;
 
+  // Display the learning sections if the status is true
   if (logged.belajar.PenggunaanHuruf.status) {
     document.getElementById("PenggunaanHuruf").style.display = "block";
     document.getElementById(

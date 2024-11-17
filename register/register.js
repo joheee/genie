@@ -1,12 +1,14 @@
 // CHECK SESSION
 if (localStorage.getItem("logged")) {
-  window.location.href = "http://localhost:5500/dashboard";
+  // Redirect dynamically based on the current domain
+  window.location.href = `${window.location.origin}/dashboard/`;
 }
+
 // LOAD DATA
 async function getDataFromLocalStorage(key, url) {
   const storedData = localStorage.getItem(key);
   if (storedData) {
-    console.log("data already push into localstorage!");
+    console.log("Data already pushed into localStorage!");
     return JSON.parse(storedData);
   } else {
     const response = await fetch(url);
@@ -18,15 +20,16 @@ async function getDataFromLocalStorage(key, url) {
     return data;
   }
 }
+
 async function loadData() {
   try {
     const users = await getDataFromLocalStorage(
       "users",
-      "http://localhost:5500/data/users.json"
+      `${window.location.origin}/data/users.json`  // Use dynamic domain
     );
     const questions = await getDataFromLocalStorage(
       "questions",
-      "http://localhost:5500/data/questions.json"
+      `${window.location.origin}/data/questions.json`  // Use dynamic domain
     );
 
     console.log("Users:", users);
@@ -35,6 +38,7 @@ async function loadData() {
     console.error("There was a problem with the fetch operation:", error);
   }
 }
+
 loadData();
 
 // TAKE INPUT
@@ -51,16 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const users = await getDataFromLocalStorage(
       "users",
-      "http://localhost:5500/data/users.json"
+      `${window.location.origin}/data/users.json`  // Use dynamic domain
     );
 
-    // validation
+    // Validation
     if (users.find((e) => e.username === username)) {
-      alert("username already exist!");
+      alert("Username already exists!");
       return;
     }
     if (users.find((e) => e.email === email)) {
-      alert("email already exist!");
+      alert("Email already exists!");
       return;
     }
 
@@ -98,6 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const { password, ...userWithoutPassword } = data;
     localStorage.setItem("logged", JSON.stringify(userWithoutPassword));
     alert(`Hola ${username}!`);
-    window.location.href = "http://localhost:5500/dashboard";
+    window.location.href = `${window.location.origin}/dashboard/`;  // Use dynamic domain
   });
 });
